@@ -7,14 +7,14 @@ package:
 
 source:
   url:  https://pswww.slac.stanford.edu/swdoc/tutorials/{{ name }}-{{ version }}.tar.gz
-  sha256: a702e0a39d0e87d28679330a16f6f503fd1571e7151d5aa5332794a0fc110acb
+  sha256: 6887e32827ec9b4d73464dcfbbd0eb3f51ec4698e0c8a6b0c6a05b6c010b1646
   patches:
     - pip.patch
 
 build:
   skip: True  # [win or osx]
   noarch: python
-  number: 13
+  number: 14
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
